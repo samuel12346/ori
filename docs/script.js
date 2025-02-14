@@ -19,10 +19,10 @@ btnSi.addEventListener('click', () => {
 });
 
 btnNo.addEventListener('click', () => {
-    mensaje.textContent = "No puedes decir que no porque nos casaremos algún día. ¡Vas a ver! 😊";
+    mensaje.textContent = "¡Casémonos! 💍";
     mensaje.classList.remove('hidden');
-    mensaje.classList.add('visible', 'animate__animated', 'animate__shakeX');
+    mensaje.classList.add('visible', 'animate__animated', 'animate__tada');
     setTimeout(() => {
-        mensaje.classList.remove('animate__animated', 'animate__shakeX');
+        mensaje.classList.remove('animate__animated', 'animate__tada');
     }, 1000);
 });
