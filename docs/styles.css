@@ -12,27 +12,41 @@ body {
 }
 
 .container {
+    width: 100%;
+    max-width: 600px;
+    padding: 20px;
+}
+
+.card {
     background: rgba(255, 255, 255, 0.2);
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
+    text-align: center;
 }
 
 h1 {
     font-family: 'Pacifico', cursive;
     font-size: 2.5rem;
     margin-bottom: 20px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
 
 .buttons {
     display: flex;
     justify-content: center;
     gap: 20px;
+    margin-top: 20px;
 }
 
 button {
-    padding: 10px 20px;
+    padding: 15px 30px;
     font-size: 1.2rem;
     border: none;
     border-radius: 25px;
@@ -58,4 +72,5 @@ button:hover {
     margin-top: 20px;
     font-size: 1.2rem;
     font-weight: bold;
+    animation: fadeIn 2s ease-in-out;
 }
