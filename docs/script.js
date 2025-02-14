@@ -19,7 +19,7 @@ btnSi.addEventListener('click', () => {
 });
 
 btnNo.addEventListener('click', () => {
-    mensaje.textContent = "No puedes decir que no porque nos encontraremos algún día. ¡Vas a ver! 😊";
+    mensaje.textContent = "No puedes decir que no porque nos casaremos algún día. ¡Vas a ver! 😊";
     mensaje.classList.remove('hidden');
     mensaje.classList.add('visible', 'animate__animated', 'animate__shakeX');
     setTimeout(() => {
