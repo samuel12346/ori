@@ -3,22 +3,96 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>San Valentín</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <title>Para Ti</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #ff9a9e, #fad0c4);
+            font-family: 'Arial', sans-serif;
+            overflow: hidden;
+        }
+        .container {
+            text-align: center;
+            position: relative;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            max-width: 400px;
+            position: relative;
+            animation: fadeIn 2s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        .message {
+            display: none;
+            font-size: 18px;
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+        .button {
+            margin-top: 20px;
+            background: #ff758c;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .button:hover {
+            background: #ff5473;
+        }
+        .image-container {
+            position: absolute;
+            top: -50px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        .image-container img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
 </head>
 <body>
     <div class="container">
+        <div class="image-container">
+            <img src="https://source.unsplash.com/80x80/?love,couple" alt="Imagen bonita">
+        </div>
         <div class="card">
-            <h1 class="animate__animated animate__fadeInDown">¿Me darías el honor de ser tu San Valentín?</h1>
-            <div class="buttons">
-                <button id="btnSi" class="animate__animated animate__fadeInLeft">¡Sí!</button>
-                <button id="btnNo" class="animate__animated animate__fadeInRight">No</button>
-            </div>
-            <p id="mensaje" class="animate__animated animate__fadeInUp hidden">Gracias, mi niña pequeña. Te amo con todo mi corazón.</p>
+            <h2>Para Ti, Mi Amor</h2>
+            <p class="message" id="msg1">Eres lo mejor que me ha pasado.</p>
+            <p class="message" id="msg2">Cada día a tu lado es un regalo.</p>
+            <p class="message" id="msg3">Te amo con todo mi corazón. ❤️</p>
+            <button class="button" onclick="showMessage()">Ver Mensaje</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        let index = 1;
+        function showMessage() {
+            let message = document.getElementById(`msg${index}`);
+            if (message) {
+                message.style.display = "block";
+                setTimeout(() => { message.style.opacity = 1; }, 100);
+                index++;
+            } else {
+                alert("Fin de los mensajes");
+            }
+        }
+    </script>
 </body>
 </html>
