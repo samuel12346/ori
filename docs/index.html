@@ -19,11 +19,11 @@
             position: relative;
         }
         .card {
-            background: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-            max-width: 400px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.3);
+            max-width: 500px;
             position: relative;
             animation: fadeIn 2s ease-in-out;
         }
@@ -33,31 +33,35 @@
         }
         .message {
             display: none;
-            font-size: 18px;
+            font-size: 20px;
             opacity: 0;
             transition: opacity 1s ease-in-out;
+            font-style: italic;
+            color: #333;
         }
         .button {
             margin-top: 20px;
-            background: #ff758c;
+            background: #ff6b81;
             color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 12px 24px;
             cursor: pointer;
-            border-radius: 5px;
+            border-radius: 8px;
+            font-size: 18px;
+            transition: 0.3s;
         }
         .button:hover {
-            background: #ff5473;
+            background: #ff4757;
         }
         .image-container {
-            position: absolute;
-            top: -50px;
-            left: 50%;
-            transform: translateX(-50%);
+            position: relative;
+            width: 120px;
+            height: 120px;
+            margin: 0 auto 15px;
         }
         .image-container img {
-            width: 80px;
-            height: 80px;
+            width: 100%;
+            height: 100%;
             border-radius: 50%;
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
             animation: float 3s ease-in-out infinite;
@@ -71,13 +75,21 @@
 <body>
     <div class="container">
         <div class="image-container">
-            <img src="https://source.unsplash.com/80x80/?love,couple" alt="Imagen bonita">
+            <!-- Cambia la ruta de la imagen por una URL accesible o ponla en una carpeta dentro de tu proyecto -->
+            <img src="C:\Users\cms\Desktop\ori\docs\img\9318b7b938621f69a8a1d75abece6d72.jpg" alt="Imagen bonita">
         </div>
         <div class="card">
             <h2>Para Ti, Mi Amor</h2>
-            <p class="message" id="msg1">Eres lo mejor que me ha pasado.</p>
-            <p class="message" id="msg2">Cada día a tu lado es un regalo.</p>
-            <p class="message" id="msg3">Te amo con todo mi corazón. ❤️</p>
+            <p class="message" id="msg1">Eres Mi niña hermosa.</p>
+            <p class="message" id="msg2">Eres lo mejor que me ha pasado.</p>
+            <p class="message" id="msg3">Siempre te amare, amare cada partecita de ti.</p>
+            <p class="message" id="msg4">Amo esos ojitos lindos.</p>
+            <p class="message" id="msg5">Amo lo peliona que eres. jsjs.</p>
+            <p class="message" id="msg6">Te amo tanto, mi niña preciosa.</p>
+            <p class="message" id="msg7">Eres la chica más maravillosa que existe.</p>
+            <p class="message" id="msg8">Para mí siempre serás mi princesa, y nunca tendrá comparación.</p>
+            <p class="message" id="msg9">Es tan hermosa cuando sonríes, mi niña preciosa.</p>
+            <p class="message" id="msg10">Eres lo mejor que me ha pasado.</p>
             <button class="button" onclick="showMessage()">Ver Mensaje</button>
         </div>
     </div>
